@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { loginUser} from "../../store/actions/useractions";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import styles from "./_signupform.module.scss"
 //import SignupForm from "./SignupForm";
 
 const LoginForm = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate(); //hari_added
     // const [forgotPasswordEmail, setForgotPasswordEmail] = useState("");
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -18,6 +19,7 @@ const LoginForm = () => {
                 alert(userJson.error);
             } else {
                 // Redirect to dashboard or home page after successful login
+             
             }
         } catch (err) {
             console.error('Error while logging in:', err);
