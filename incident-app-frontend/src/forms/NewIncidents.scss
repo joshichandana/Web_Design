@@ -13,21 +13,22 @@
     
     left: 0;
     top: 60px;
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      
+    
+    
+    h1{
+      text-align: left;
+      float: left;
+      margin-right: 150px;
+    }
+    }
   }
 
-div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  
 
-
-h1{
-  text-align: left;
-  float: left;
-  margin-right: 150px;
-}
-}
 
 label {
   font-weight: bold;

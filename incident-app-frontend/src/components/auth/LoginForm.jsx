@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { loginUser} from "../../store/actions/useractions";
 import { Link } from "react-router-dom";
-import styles from "./_signupform.module.scss"
+// import styles from "./_signupform.module.scss"
+import styles from './_signup.module.scss'
 //import SignupForm from "./SignupForm";
 
 const LoginForm = () => {
@@ -26,7 +27,7 @@ const LoginForm = () => {
     }
 
     return (
-        
+
         <form className={styles.formHandleSignUp} onSubmit={handleLogin}>
             <div className={styles.formItem}>
                 <label className={styles.formLabel}>
@@ -40,7 +41,7 @@ const LoginForm = () => {
                 </label>
                 <input type='password' className={styles.formControl} placeholder='Your Password'  required />
             </div>
-            <div className={styles.formItem}>
+            <div className={[styles.formItem,styles.forgotPassword].join(' ')}>
                 <p><a href='/forgotPassword'>Forgot password?</a></p>
             </div>
             <div className={styles.formItem}>

@@ -12,17 +12,18 @@ const Signup = () => {
   };
 
   return (
-    <div className={styles.signUpContainer}>
-            <div className={styles.mainContainer}>
-                <div className={styles.formContainer}>
-                    <h1 className={styles.h1Container}>Sign up for support portal</h1>
-                    <p>Already a user? <b><a href='/login' className={styles.anchorLogin}>Login</a></b></p>
-                    <SignupForm/>
-                </div>
-            </div>
-            <img alt="SignUp Logo" src={signUpAnimation} width={window.innerWidth*(3/5)} height={window.innerHeight*(3/4)}/>
+    <div className={styles.signUpParent}>
+      <div className={styles.signUpContainer}>
+        <div className={styles.mainContainer}>
+          <div className={styles.formContainer}>
+            <h1 className={styles.h1Container}>Sign up for support portal</h1>
+            <p>Already a user? <b><a href='/login' className={styles.anchorLogin}>Login</a></b></p>
+            <SignupForm/>
+          </div>
         </div>
-
+        <img alt="SignUp Logo" src={signUpAnimation} width="550" height="457"/>
+      </div>
+    </div>
   );
 };
 

@@ -13,16 +13,18 @@ const Login = () => {
   };
 
   return (
-    <div className={styles.signUpContainer}>
-    <div  className={styles.mainContainer}>
-        <div className={styles.formContainer}>
-            <h1 className={styles.h1Container}>Login for support portal</h1>
-            <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
-            <LoginForm/> 
-        </div>
+    <div className={styles.signInParent}>
+        <div className={styles.signUpContainer}>
+          <img height="500px" alt="Login Logo" src={loginAnimation}/>
+          <div  className={styles.mainContainer}>
+              <div className={styles.formContainer}>
+                  <h1 className={styles.h1Container}>Login for support portal</h1>
+                  <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
+                  <LoginForm/> 
+              </div>
+          </div>
+      </div>
     </div>
-    <img height={window.innerHeight*(2/3)} alt="Login Logo" src={loginAnimation}/>
-</div>
   );
 };
 

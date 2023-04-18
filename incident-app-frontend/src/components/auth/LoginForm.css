@@ -1,0 +1,129 @@
+.signInParent .loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  position: absolute;
+  left: 547px;
+  top: 60px;
+}
+.signInParent h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.signInParent div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.signInParent label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.signInParent input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.signInParent button {
+  padding: 12px 24px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.signInParent button:hover {
+  background-color: #0055cc;
+}
+.signInParent a {
+  color: #0077ff;
+  text-decoration: none;
+}
+.signInParent a:hover {
+  text-decoration: underline;
+}
+
+.signUpParent .loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  position: absolute;
+  left: 547px;
+  top: 60px;
+}
+.signUpParent h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.signUpParent div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.signUpParent label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.signUpParent input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 50;
+  box-sizing: border-box;
+}
+.signUpParent button {
+  padding: 12px 24px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.signUpParent button:hover {
+  background-color: #0055cc;
+}
+.signUpParent a {
+  color: #0077ff;
+  text-decoration: none;
+}
+.signUpParent a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=LoginForm.css.map */

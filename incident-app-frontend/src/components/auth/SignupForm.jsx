@@ -2,7 +2,10 @@ import React, {useState} from "react";
 import { useDispatch } from "react-redux";
 import { addUserDetails } from "../../store/actions/useractions";
 import { Link } from "react-router-dom";
-import styles from './_signupform.module.scss'
+import styles from './_signup.module.scss'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function SignupForm() {
   const dispatch = useDispatch();
@@ -64,33 +67,42 @@ function SignupForm() {
 
   return (
     <form onSubmit={handleSignUp} className={styles.formHandleSignUp}>
-      {fields.map((field) => {
-        return (
-          <div key={field.name} className={styles.formItem}>
-            <label className={styles.formLabel}>
-              {field.label}<span className={styles.formAsterisk}>*</span>
-            </label>
-            <input type={field.type} name={field.name} placeholder={field.placeholder} className={styles.formControl}/>
+      <Container>
+        <Row>
+          {fields.map((field) => {
+            return (
+              <Col md={field.name != "password" ? 6 : 12} className="customPadding">
+                <div key={field.name} className={styles.formItem}>
+                  <label className={styles.formLabel}>
+                    {field.label}<span className={styles.formAsterisk}>*</span>
+                  </label>
+                  <input type={field.type} name={field.name} placeholder={field.placeholder} className={styles.formControl}/>
+                </div>
+              </Col>
+            );
+          })}
+          <Col md={12} className="customPadding">
+          <div className={styles.formItem}>
+                    <label className={styles.formLabel}>Role<span className={styles.formAsterisk}>*</span></label>
+                    <div className={styles.labelHolder}>
+                      <div className={styles.container}>
+                        <select name="role" required>
+                                <option value="supportTeam">Agent</option>
+                                <option value="customer">Customer</option>
+                        </select>
+                      </div>
+                    </div>  
           </div>
-        );
-      })}
-      <div className={styles.formItem}>
-                <label className={styles.formLabel}>Role<span className={styles.formAsterisk}>*</span></label>
-                <div className={styles.labelHolder}>
-                  <div className={styles.container}>
-                     <select name="role" required>
-                            <option value="supportTeam">Agent</option>
-                            <option value="customer">Customer</option>
-                     </select>
-                  </div>
-                </div>  
-        </div>
-      
+          
+        
       <div className={styles.formItem}>
         <button type="submit" variant="contained" className={styles.registerButton} >
           Register
         </button>
       </div>
+      </Col>
+      </Row>
+      </Container>
     </form>
   );
 
