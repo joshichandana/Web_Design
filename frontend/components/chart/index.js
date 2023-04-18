@@ -20,7 +20,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-// import { Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -86,7 +86,7 @@ const data = {
 export default () => (
   <div>
     <h2>Past Trends</h2>
-    {/* <Line
+    <Line
       data={data}
       height={30}
       width={100}
@@ -98,6 +98,6 @@ export default () => (
           }
         }
       }}
-    /> */}
+    />
   </div>
 );

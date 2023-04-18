@@ -144,6 +144,32 @@ function TicketManagement() {
 
                             
                         </div>
+                        <div className='FilterScreen'>
+                                <div className={filterState ?styles.RedIcon : ""}></div>
+                                <Button
+                                    variant="contained"
+                                    onClick={handleDrawerOpen}
+                                    sx={{
+                                        color: 'white',
+                                        // boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+                                           background: 'teal',
+                                        ':hover': {
+                                            // bgcolor: '#ECEFF3', // theme.palette.primary.main
+                                            color: 'white',
+                                        },
+
+                                    }}
+                                >
+                                    <KeyboardDoubleArrowRightIcon sx={{
+                                        color: 'white',
+                                        ':hover': {
+                                            color: '#12344D',
+                                        },
+                                    }} />
+                                    Filter</Button>
+
+                        </div>
+
                         <div>
 
                             {/* Component to Show Tickets either in Card / Ticket View  */}
@@ -182,32 +208,7 @@ function TicketManagement() {
                                 <FilterScreen></FilterScreen>
                             </Drawer>
                         </div>
-                        <div className='FilterScreen'>
-                                <div className={filterState ?styles.RedIcon : ""}></div>
-                                <Button
-                                    variant="contained"
-                                    onClick={handleDrawerOpen}
-                                    sx={{
-                                        color: 'white',
-                                        // boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                                           background: 'teal',
-                                        ':hover': {
-                                            // bgcolor: '#ECEFF3', // theme.palette.primary.main
-                                            color: 'white',
-                                        },
-
-                                    }}
-                                >
-                                    <KeyboardDoubleArrowRightIcon sx={{
-                                        color: 'white',
-                                        ':hover': {
-                                            color: '#12344D',
-                                        },
-                                    }} />
-                                    Filter</Button>
-
-                            </div>
-
+                        
 
                     </div>
                 )
