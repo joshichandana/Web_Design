@@ -9,95 +9,85 @@
  * @requires chart.js
  */
 
+
+
 import React from 'react';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-// import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, Title, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+import { ArcElement } from 'chart.js';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
-const graphOptions = {
-  fill: false,
-  lineTension: 0.1,
-  borderCapStyle: 'butt',
-  borderDash: [],
-  borderDashOffset: 0.0,
-  borderJoinStyle: 'miter',
-  pointBorderWidth: 1,
-  pointHoverRadius: 5,
-  pointHoverBorderWidth: 2,
-  pointRadius: 1,
-  pointHitRadius: 10
-};
+const graphColours = ['#569DAA', '#B9EDDD', 'red'];
 
-const graphColours = (colourValue) => ({
-  borderColor: colourValue,
-  pointBorderColor: colourValue,
-  pointHoverBackgroundColor: colourValue,
-  backgroundColor: colourValue, // change this to lighter value for better ux
-  pointBackgroundColor: '#fff',
-  pointHoverBorderColor: 'rgba(220,220,220,1)'
-});
+const Incidentsdata = [
+  // Data for January
+  [99, 32, 3],
+  // Data for February
+  [79, 94, 8],
+  // Data for March
+  [23, 12, 1],
+  // Data for April
+  [50, 43, 4],
+  // Data for May
+  [12, 23, 2],
+  // Data for June
+  [33, 109, 5],
+  // Data for July
+  [44, 12, 0],
+  // Data for August
+  [5, 43, 10],
+  // Data for September
+  [38, 23, 6],
+  // Data for October
+  [19, 109, 7],
+  // Data for November
+  [10, 12, 9],
+  // Data for December
+  [99, 43, 11]
+];
 
-const data = {
-  labels: [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ],
-  datasets: [
-    {
-      label: 'Number of incoming tickets',
-      data: [99, 79, 23, 50, 12, 33, 44, 5, 38, 19, 10, 99],
-      ...graphOptions,
-      ...graphColours('#12344D')
-    },
-    {
-      label: 'Number of resolved tickets',
-      data: [32, 94, 12, 43, 23, 109, 12, 43, 23, 109, 12, 43],
-      ...graphOptions,
-      ...graphColours('#ff5722')
-    },
-    {
-      label: 'Number of overdue tickets',
-      data: [3, 8, 1, 4, 2, 5, 0, 10, 6, 7, 9, 11],
-      ...graphOptions,
-      ...graphColours('red')
-    }
-
-  ]
+const generateData = (incoming, resolved, overdue) => {
+  return {
+    labels: [
+      'Number of incoming tickets',
+      'Number of resolved tickets',
+      'Number of overdue tickets'
+    ],
+    datasets: [
+      {
+        data: [incoming, resolved, overdue],
+        backgroundColor: graphColours,
+        borderWidth: 1,
+        hoverOffset: 4,
+      }
+    ]
+  };
 };
 
 export default () => (
   <div>
-    <h2>Past Trends</h2>
-    {/* <Line
-      data={data}
-      height={30}
-      width={100}
-      options={{
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }}
-    /> */}
+    <h2>Past Data</h2>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+      {Incidentsdata.map((data, index) => (
+        <div key={index} style={{ flexBasis: '31%', marginBottom: '20px' }}>
+          <h3>{index + 1}. {data[0]} tickets in {index + 1}:</h3>
+          <Pie
+            data={generateData(...data)}
+            height={80}
+            width={160}
+            options={{
+              responsive: true,
+              plugins: {
+                legend: {
+                  position: 'bottom',
+                }
+              }
+            }}
+          />
+        </div>
+      ))}
+    </div>
   </div>
 );
+

@@ -3,11 +3,8 @@ import { HYDRATE } from "next-redux-wrapper";
 
 export const cardTypes = {
     unresolved: "unresolved",
-    overdue: "overdue",
     dueToday: "dueToday",
-    open: "open",
-    // onHold: "onHold",
-    unassigned: "unassigned"
+    open: "open"
 }
 
 // Initial state
@@ -17,10 +14,10 @@ const initialState = {
             type: cardTypes.unresolved,
             number: 0
         },
-        {
-            type: cardTypes.overdue,
-            number: 1
-        },
+        // {
+        //     type: cardTypes.overdue,
+        //     number: 1
+        // },
         {
             type: cardTypes.dueToday,
             number: 2
@@ -29,10 +26,10 @@ const initialState = {
             type: cardTypes.open,
             number: 3
         },
-        {
-            type: cardTypes.unassigned,
-            number: 5
-        }
+        // {
+        //     type: cardTypes.unassigned,
+        //     number: 5
+        // }
 
     ]
  }

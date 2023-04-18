@@ -27,7 +27,8 @@ function Dashboard(){
     return (
 
         <div className={styles.wrapper}>
-            <h2>Current Trends</h2>
+            <h1>Incident Analytics</h1>
+            <h2>Current Data</h2>
             <CardsSection />
             <Charts />
         </div>
