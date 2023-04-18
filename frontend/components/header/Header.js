@@ -26,6 +26,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import { openLeftDrawer } from '../../store/slice/appSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link';
@@ -155,7 +156,7 @@ function ResponsiveAppBarComponent() {
 
             {/* Logo for small size screen */}
             <Link scroll={false} href="/">
-              <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: '#12344d' }} />
+              <LocalActivityIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: '#12344d' }} />
             </Link>
 
             {/* CURRENT VIEW NAME */}
@@ -168,10 +169,10 @@ function ResponsiveAppBarComponent() {
                 flexGrow: 1,
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                fontFamily: 'Tahoma',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: '#12344d',
+                letterSpacing: '.1rem',
+                color: 'teal',
                 textDecoration: 'none',
               }}
             >

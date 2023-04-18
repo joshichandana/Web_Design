@@ -12,9 +12,11 @@
 
 
 import React from 'react';
+
 import { Chart as ChartJS, Title, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { ArcElement } from 'chart.js';
+
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
@@ -67,6 +69,7 @@ const generateData = (incoming, resolved, overdue) => {
 
 export default () => (
   <div>
+
     <h2>Past Data</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
       {Incidentsdata.map((data, index) => (
@@ -88,6 +91,7 @@ export default () => (
         </div>
       ))}
     </div>
+
   </div>
 );
 

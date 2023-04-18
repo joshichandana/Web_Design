@@ -28,10 +28,6 @@ const Login = () => {
         dispatch(setCurrentView("Login"));
     }, [])
 
-    const getGifWidth = () => {
-        return window.innerWidth/2;
-    }
-
     const getHeight = () => {
         return window.innerHeight*(2/3);
     }
