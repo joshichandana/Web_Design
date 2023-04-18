@@ -62,6 +62,38 @@ export const loginUser = (email, password) => {
       email: email,
       password: password,
     };
+    // try {
+    //   const response = await fetch("http://localhost:8080/users/auth", {
+    //     method: "POST",
+    //     mode: "cors",
+    //     credentials: "same-origin",
+    //     cache: "no-cache",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(loginData),
+    //   })
+    //     .then((response) => response.text())
+    //     .then((data) => console.log(data));
+    //   console.log("hello", response);
+    //   if (!response.ok) {
+    //     throw new Error("Error while logging in");
+    //   }
+    //   const userJson = await response.json();
+
+    //   if (userJson.error) {
+    //     alert(userJson.error);
+    //   } else {
+    //     //dispatch({ type: LOGIN_USER, payload: userJson });
+    //     localStorage.setItem("role", JSON.stringify("customer")); //hari_added
+    //     localStorage.setItem("userId", JSON.stringify("123")); //hari_added
+    //     //window.location.href = "/dashboard";
+    //   }
+    // } catch (error) {
+    //   console.error(error);
+    // }
+
+    // hari_added
     try {
       const response = await fetch("http://localhost:8080/users/auth", {
         method: "POST",
@@ -73,22 +105,18 @@ export const loginUser = (email, password) => {
         },
         body: JSON.stringify(loginData),
       });
-      console.log("hello", loginData);
-      if (!response.ok) {
-        throw new Error("Error while logging in");
-      }
-      const userJson = await response.json();
-
-      if (userJson.error) {
-        alert(userJson.error);
-      } else {
-        //dispatch({ type: LOGIN_USER, payload: userJson });
-        localStorage.setItem("role", JSON.stringify(userJson.role)); //hari_added
-        localStorage.setItem("userId", JSON.stringify(userJson._id)); //hari_added
+      const responseData = await response.json();
+      console.log(responseData);
+      if (response.ok) {
+        localStorage.setItem("role", JSON.stringify(responseData.data.role));
+        localStorage.setItem("userId", JSON.stringify(responseData.data.id));
         window.location.href = "/dashboard";
+      } else {
+        throw new Error("Error while logging in");
       }
     } catch (error) {
       console.error(error);
+      alert("Error while logging in");
     }
   };
 };
