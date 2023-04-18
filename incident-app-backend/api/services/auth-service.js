@@ -1,7 +1,7 @@
 import User  from './../models/User.js';
 import Token from '../models/Token.js';
 import crypto from 'crypto';
-import sendEmail from './../utils/sendEmail.js';
+import sendEmail from '../../utils/sendEmail.js';
 import bcrypt from 'bcrypt';
 import Joi from 'joi';
 

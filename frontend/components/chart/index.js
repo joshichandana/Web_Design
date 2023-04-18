@@ -70,7 +70,7 @@ const generateData = (incoming, resolved, overdue) => {
 export default () => (
   <div>
 
-    <h2>Past Data</h2>
+    <h2>History</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
       {Incidentsdata.map((data, index) => (
         <div key={index} style={{ flexBasis: '31%', marginBottom: '20px' }}>

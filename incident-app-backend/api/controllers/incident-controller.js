@@ -1,16 +1,19 @@
+
+
 /**
- * Ticket controller
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
+ * Incident controller
+ * Author: Supriya Vallarapu
+ * 
  *
- * @module controllers/ticket-controller
- * @requires services/ticket-service
+ * @module controllers/Incident-controller
+ * @requires services/Incident-service
  * @requires constants
  * @requires express
  */
 
-import * as ticketService from '../services/ticket-service.js';
-import constants from '../constants.js';
+import * as incidentService from "./../services/incident-service.js";
+
+import constants from "../../constants.js";
 
 const statusCodes = constants.statusCodes;
 
@@ -39,17 +42,17 @@ const setError = (err, response, code = statusCodes.INTERNAL_SERVER_ERROR) => {
 };
 
 /**
- * Get all tickets
+ * Get all incidents
  * @param {*} req request object
  * @param {*} res response object
  */
 export const getAll = async (req, res) => {
   try {
-    const tickets = await ticketService.getAll();
+    const incidents = await incidentService.getAll();
 
     setResponse({
-      message: 'Tickets retrieved successfully',
-      data: tickets
+      message: 'incidents retrieved successfully',
+      data: incidents
     }, res);
   } catch (error) {
     setError(error, res);
@@ -57,21 +60,21 @@ export const getAll = async (req, res) => {
 };
 
 /**
- * Get a ticket by id
+ * Get a incident by id
  * @param {*} req request object
  * @param {*} res response object
  */
 export const get = async (req, res) => {
   try {
-    const ticket = await ticketService.get(req.params.id);
+    const incident = await incidentService.get(req.params.id);
 
-    if (!ticket) {
-      return setError({ error: 'Ticket not found' }, res, statusCodes.NOT_FOUND);
+    if (!incident) {
+      return setError({ error: 'incident not found' }, res, statusCodes.NOT_FOUND);
     }
 
     setResponse({
-      message: 'Ticket retrieved successfully',
-      data: ticket
+      message: 'incident retrieved successfully',
+      data: incident
     }, res);
   } catch (error) {
     setError(error, res);
@@ -79,7 +82,7 @@ export const get = async (req, res) => {
 };
 
 /**
- * Create a ticket
+ * Create a incident
  * @param {*} req request object
  * @param {*} res response object
  */
@@ -89,20 +92,20 @@ export const post = async (req, res) => {
       return setError({ error: 'Content cannot be empty' }, res, statusCodes.BAD_REQUEST);
     }
 
-    if (!req.body.subject) {
-      return setError({ error: 'Subject cannot be empty' }, res, statusCodes.BAD_REQUEST);
+    if (!req.body.title) {
+      return setError({ error: 'Title cannot be empty' }, res, statusCodes.BAD_REQUEST);
     }
 
     if (!req.body.description) {
       return setError({ error: 'Description cannot be empty' }, res, statusCodes.BAD_REQUEST);
     }
 
-    const ticket =req.body;
-    const savedticket = await ticketService.save(ticket);
+    const incident =req.body;
+    const savedincident = await incidentService.save(incident);
 
     setResponse({
-      message: 'Ticket saved successfully',
-      data: savedticket
+      message: 'incident saved successfully',
+      data: savedincident
     }, res, statusCodes.CREATED);
   } catch (error) {
     setError(error, res);
@@ -110,22 +113,22 @@ export const post = async (req, res) => {
 };
 
 /**
- * Update a ticket
+ * Update a incident
  * @param {*} req request object
  * @param {*} res response object
  */
 export const put = async (req, res) => {
   try {
-    const ticket = req.body;
-    const updatedTicket = await ticketService.update(req.params.id, ticket, { new: true });
+    const incident = req.body;
+    const updatedincident = await incidentService.update(req.params.id, incident, { new: true });
 
-    if (!updatedTicket) {
-      return setError({ error: 'Ticket not found' }, res, statusCodes.NOT_FOUND);
+    if (!updatedincident) {
+      return setError({ error: 'incident not found' }, res, statusCodes.NOT_FOUND);
     }
 
     setResponse({
-      message: 'Ticket updated successfully',
-      data: updatedTicket
+      message: 'incident updated successfully',
+      data: updatedincident
     }, res, statusCodes.OK);
   } catch (error) {
     setError(error, res);
@@ -133,17 +136,17 @@ export const put = async (req, res) => {
 };
 
 /**
- * Delete a ticket
+ * Delete a incident
  * @param {*} req request object
  * @param {*} res response object
  */
 export const remove = async (req, res) => {
   try {
-    const ticket = await ticketService.remove(req.params.id);
+    const incident = await incidentService.remove(req.params.id);
 
     setResponse({
-      message: 'Ticket deleted successfully',
-      data: ticket
+      message: 'incident deleted successfully',
+      data: incident
     }, res, statusCodes.OK);
   } catch (error) {
     setError(error, res);

@@ -1,4 +1,4 @@
-const url = 'http://localhost:8000/';
+const url = 'http://localhost:8080/';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton } from '@mui/material';
 
@@ -98,7 +98,7 @@ export const getAllUserforTicket = async () =>  {
 
 //Get all Tickets
 export const getAllTickets = async () => {
-    return (await fetch(url + 'ticket')).json();
+    return (await fetch(url + 'incidents')).json();
 }
 
 // delete Ticket from Id 

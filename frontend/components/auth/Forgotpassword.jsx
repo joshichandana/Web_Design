@@ -54,7 +54,7 @@ const Forgotpassword = () => {
         };
 
         try {
-            await fetch('http://localhost:8000/user/', {
+            await fetch('http://localhost:8080/user/', {
                 method: 'PUT',
                 mode: 'cors',
                 cache: 'no-cache',
