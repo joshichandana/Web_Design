@@ -16,9 +16,13 @@ import styles1 from "./_signupform.module.scss"
 import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
-import { setCurrentView, setUserDetails } from "../../store/slice/appSlice";
+//un
+// import { setCurrentView, setUserDetails } from "../../store/slice/appSlice";
+import { setCurrentView, setUserDetails } from "../../store/slice/authslice";
 import Image from "next/image";
-import loginAnimation from '../../assets/loginVerification.gif';
+//un
+// import loginAnimation from '../../assets/loginVerification.gif';
+import loginAnimation from '../../components/resources/login.gif';
 import { Button } from "@mui/material";
 
 
@@ -27,10 +31,10 @@ const Forgotpassword = () => {
     const router = useRouter()
 
     const dispatch = useDispatch();
-
-    useEffect(()=>{
-        dispatch(setCurrentView("Forgotpassword"));
-    }, [])
+    //un
+    // useEffect(()=>{
+    //     dispatch(setCurrentView("Forgotpassword"));
+    // }, [])
 
     const getGifWidth = () => {
         return window.innerWidth/2;
@@ -70,7 +74,7 @@ const Forgotpassword = () => {
                     alert(userJson['error']);
                 }
                 else {
-                    dispatch(setUserDetails(userJson));
+                    // dispatch(setUserDetails(userJson));
                     await new Promise(r => setTimeout(r,1000));
                     router.push('/login');
                 }

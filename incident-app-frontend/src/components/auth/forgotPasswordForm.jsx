@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { forgotPassword} from "../../store/actions/useractions";
 import { checkEmailExists } from "../../store/actions/useractions";
-
+import styles from './_signup.module.scss'
 
 // const dispatch = useDispatch();
 //     // const [forgotPasswordEmail, setForgotPasswordEmail] = useState("");
@@ -95,22 +95,32 @@ import { checkEmailExists } from "../../store/actions/useractions";
 // }
 
 return (
-        
-  <form onSubmit={handleLogin} className="loginform">
-      <h1>Reset Password</h1>
-      
-      <div>
-          <label htmlFor="email">Email:</label>
-          <input id="email" type='email' placeholder="Enter your email" required />
-      </div>
-      <div>
-          <label htmlFor="password">New Password:</label>
-          <input id="password" type="password" placeholder="Enter new password" required />
-      </div>
-      <div>
-          <button type="submit">Reset Password</button>
-      </div>
-  </form>
+    <div className={styles.forgotPasswordParent}>
+        <div className={styles.signUpContainer}>
+            {/* <img height="500px" alt="Login Logo" src={loginAnimation}/> */}
+            <div  className={styles.mainContainer}>
+                <div className={styles.formContainer}>
+                    <h1 className={styles.h1Container}>Forgot Password</h1>
+                    <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
+                    <form onSubmit={handleLogin} className="loginform">
+                        
+                        <div>
+                            <label htmlFor="email">Email:</label>
+                            <input id="email" type='email' placeholder="Enter your email" required />
+                        </div>
+                        <div>
+                            <label htmlFor="password">New Password:</label>
+                            <input id="password" type="password" placeholder="Enter new password" required />
+                        </div>
+                        <div>
+                            <button type="submit">Reset Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>     
+  
   
   
 );

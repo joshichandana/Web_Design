@@ -25,7 +25,8 @@ function Dashboard() {
       const resdata = await response.json();
       const allIncidents = resdata.data;
 
-      if (storedRole === "employer") {
+      // if (storedRole === "employer") {
+      if (storedRole === "supportTeam") {
         setIncidents(allIncidents);
       } else if (storedRole === "customer") {
         const userIncidents = allIncidents.filter(
