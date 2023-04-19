@@ -8,23 +8,11 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import {useState } from 'react';
 import {  selectTicket, deleteTicketFromMenu } from '../../../store/slice/ticketManagementSlice';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton } from '@mui/material';
+
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
-// import { makeStyles } from '@material-ui/core/styles';
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         '& h2': {
-//             backgroundColor: '#12344d',
-//             color: 'white'
-//         }
-//     },
-//     vSpace: {
-//         margin: theme.spacing(2, 0)
-//     },
 
 
-// }));
 
 export default function TicketMenu() {
 

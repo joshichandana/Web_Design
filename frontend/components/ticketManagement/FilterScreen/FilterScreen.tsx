@@ -202,21 +202,7 @@ function FilterScreen() {
                     }}
                 >Apply
                 </Button>
-                {/* <Button
-                    variant="contained"
-                    onClick={resetFilters}
-                    sx={{
-                        color: 'white',
-                        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                        background: '#12344D',
-                        ':hover': {
-                            bgcolor: '#ECEFF3', // theme.palette.primary.main
-                            color: '#12344D',
-                        },
-
-                    }}
-                >Reset
-                </Button> */}
+                
             </div>
 
 

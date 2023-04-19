@@ -1,7 +1,6 @@
 /**
  * Login component.
- * Author: Divya Shree
- * Date: 08/12/2022
+ * 
  *
  * @module components/auth
  * @requires react

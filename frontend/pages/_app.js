@@ -1,8 +1,6 @@
 /**
  * File Name: _app.js
- * Author: Dhruv Parthasarathy
- * File Created: First commit
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file acts as the NextJS wrapper for the application.

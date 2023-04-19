@@ -95,52 +95,8 @@ function TicketManagement() {
                     <div className={styles.TicketMangement}>
 
                         <div className={styles.TicketHeader}>
-                            {/* checkbox sort by , dropdown , filter Screen Button  */}
-                            {/* <div className={styles.SortSection}>
-                                <span>Sort By : &nbsp;</span>
-
-                                <Autocomplete
-
-                                    id="tags-standard"
-                                    onChange={(event: any, newValue: any) => {
-                                        handleSortTable(newValue);
-                                    }}
-                                    fullWidth
-                                    disableClearable
-
-                                 
-                                    // classes={{ inputRoot: classes.inputRoot }}
-
-                                    options={state.sortByDropdown}
-                                    value = {sort['type']}
-                                    sx={{ width: '200px', fontSize: '12px' }}
-                                    renderInput={(params) => (
-                                        <TextField
-                                            {...params}
-                                            placeholder="Sort by"
-                                        />
-                                    )}
-                                /> */}
-
-                                {/* <Autocomplete
-                                    id="tags-standard"
-                                    fullWidth
-                                    disableClearable
-                                    onChange={(event: any, newValue: any) => {
-                                        handleSortOrder(newValue);
-                                    }}
-                                    // classes={{ inputRoot: classes.inputRoot }}
-                                    options={sortOrder || []}
-                                    value = {sort['order']}
-                                    sx={{ width: '125px', padding: '5px' }}
-                                    renderInput={(params) => (
-                                        <TextField
-                                            {...params}
-                                            placeholder="Sort Order"
-                                        />
-                                    )}
-                                />
-                            </div> */}
+                           
+                                
 
                             <div className='FilterScreen'>
                                 <div className={filterState ?styles.RedIcon : ""}></div>

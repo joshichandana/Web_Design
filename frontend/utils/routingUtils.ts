@@ -1,8 +1,6 @@
 /**
  * 
- * Author: Dhruv Parthasarathy
- * Date: 20th Nov, 2022
- * 
+ 
  * 
  * This file will contain the various utility functions that we will be using 
  * that are related to routing

@@ -1,7 +1,6 @@
 /**
  * Form component for the ticket creation page.
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
+ 
  *
  * @module components/form
  * @requires react
@@ -26,14 +25,7 @@ import HailTextField from './text-field.js';
 import HailAutocompleteField from './autocomplete-field.js';
 import { setCurrentView } from '../../store/slice/appSlice.js';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     padding: theme.spacing(5, 0)
-//   },
-//   vSpace: {
-//     margin: theme.spacing(2, 0)
-//   }
-// }));
+
 
 /*
  * props should contain:

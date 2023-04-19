@@ -1,8 +1,6 @@
 /**
  * File Name: ticket-management.index.js
- * Author: Dhruv Parthasarathy
- * File Created: 
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file acts as the export for the Ticket Management component in the app

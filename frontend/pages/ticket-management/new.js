@@ -1,7 +1,6 @@
 /**
  * New Ticket Form page
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
+ * 
  *
  * @module pages/ticket-management/new
  * @requires components/form

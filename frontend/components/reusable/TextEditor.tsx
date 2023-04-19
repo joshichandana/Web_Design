@@ -1,8 +1,5 @@
 /**
  * File Name: components/reusable/TextEditor.tsx
- * Author: Dhruv Parthasarathy
- * File Created: Dec, 8th, Thu
- * Last Modified: Dec, 8th, Thu
  * 
  * About: 
  * This file contains the reusable text editor component that can be used
