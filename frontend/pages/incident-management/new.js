@@ -2,7 +2,7 @@
  * New Ticket Form page
  * 
  *
- * @module pages/ticket-management/new
+ * @module pages/incident-management/new
  * @requires components/form
  * @requires react-redux
  * @requires components/layout/layout

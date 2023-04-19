@@ -98,7 +98,7 @@ function ResponsiveAppBarComponent() {
    * This function is called when the user clicks on the New Ticket button
    */
   const handleOpenNewTicketForm = () => {
-    Router.push('/ticket-management/new');
+    Router.push('/incident-management/new');
   };
 
   /**
@@ -195,10 +195,10 @@ function ResponsiveAppBarComponent() {
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'monospace',
+                fontFamily: 'Tahoma',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: '#12344d',
+                letterSpacing: '.1rem',
+                color: 'teal',
                 textDecoration: 'none',
               }}
             >

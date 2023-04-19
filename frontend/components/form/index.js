@@ -45,7 +45,7 @@ export default function FormData(props) {
   const dispatch = useDispatch();
 
   useEffect(() =>{
-    dispatch(setCurrentView("New Ticket"));
+    dispatch(setCurrentView("New Incident"));
   }, []);
 
   // for now, using dummy data
@@ -234,7 +234,7 @@ export default function FormData(props) {
 
         <Box mt={3}>
         <div style={{display:'flex', width:"100%"}}>
-          <Link  scroll={false} href="/ticket-management">
+          <Link  scroll={false} href="/incident-management">
             
             <Button variant="contained" type="button" sx={{mr: 89, backgroundColor: 'black', width: '15%'}}>
               Go Back

@@ -50,7 +50,7 @@ export default function TemporaryDrawer() {
 
     >
       <List key={anchor}>
-        {[ 'Ticket Management', 'Dashboard'].map((text, index) => (
+        {[ 'Incident Management', 'Dashboard'].map((text, index) => (
           <Link scroll={false} key={index} href={`/${returnUrl(text)}`}
 
           >

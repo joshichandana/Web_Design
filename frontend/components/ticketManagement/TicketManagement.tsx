@@ -33,7 +33,7 @@ function TicketManagement() {
     useEffect(() => {
         dispatch(unselectTicket())
         dispatch(fetchRows());
-        dispatch(setCurrentView("Ticket Management"));
+        dispatch(setCurrentView("Incident Management"));
     }, []);
 
     const [filterDrawerState, sortFilters, ticketSelected , filterState] = useSelector((state: any) => [
