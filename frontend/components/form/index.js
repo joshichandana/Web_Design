@@ -94,7 +94,7 @@ export default function FormData(props) {
   };
 
   const saveTicket = (ticketData) => {
-    return fetch('http://localhost:8080/incident/', {
+    return fetch('http://localhost:8080/incidents/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

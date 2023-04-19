@@ -70,7 +70,7 @@ const staticColumns = [
 //Default Predefined Values //
 
 export const getAllTickets = async () => {
-    return (await fetch('http://localhost:8080/incident')).json();
+    return (await fetch('http://localhost:8080/incidents')).json();
 }
 
 // This is used to filter the rows based on Filters applied

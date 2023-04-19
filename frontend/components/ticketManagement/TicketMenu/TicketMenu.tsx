@@ -27,7 +27,7 @@ export default function TicketMenu() {
 
     let columns: GridColDef[] = [
         { field: 'customer', headerName: 'Assigner', sortable: false ,flex: 0.25 },
-        { field: 'subject', headerName: 'Title', flex: 0.5 , sortable: false , align:'center' , headerAlign:'center' },
+        { field: 'subject', headerName: 'Subject', flex: 0.5 , sortable: false , align:'center' , headerAlign:'center' },
         { field: 'agent', headerName: 'Assignee', sortable: false ,flex: 0.25,  align: 'center' , headerAlign:'center' },
         { field: 'state', headerName: 'State', sortable: false , align:'center', headerAlign:'center'},
         // { field: 'group', headerName: 'Group', sortable: false , align:'center', headerAlign:'center'},

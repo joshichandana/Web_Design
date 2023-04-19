@@ -92,8 +92,8 @@ export const post = async (req, res) => {
       return setError({ error: 'Content cannot be empty' }, res, statusCodes.BAD_REQUEST);
     }
 
-    if (!req.body.title) {
-      return setError({ error: 'Title cannot be empty' }, res, statusCodes.BAD_REQUEST);
+    if (!req.body.subject) {
+      return setError({ error: 'Subject cannot be empty' }, res, statusCodes.BAD_REQUEST);
     }
 
     if (!req.body.description) {

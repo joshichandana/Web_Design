@@ -104,7 +104,7 @@ export const getAllTickets = async () => {
 // delete Ticket from Id 
 
 export const deleteTicketbyId =  async (id) => {
-    return (await fetch(`${url}ticket/${id}`, { method: 'DELETE' })).json();
+    return (await fetch(`${url}incidents/${id}`, { method: 'DELETE' })).json();
 }
 
 // This is used to filter the rows based on Filters applied

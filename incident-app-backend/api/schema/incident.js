@@ -12,7 +12,7 @@
 import constants from "../../constants.js";
 
 const incidentSchema = {
-  title: {
+  subject: {
     type: String,
     required: true,
   },
