@@ -16,6 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import styles from './_footer.module.scss';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export default function FooterComponent() {
   return (
@@ -27,7 +28,8 @@ export default function FooterComponent() {
         color : 'teal'
       }} >
         <Toolbar className={styles.wrapper}>
-          Designed by Chandana, Supriya, Dharma, Ankur
+        <CopyrightIcon/>
+          IncidentNinja
         </Toolbar>
       </AppBar>
     </Box>
