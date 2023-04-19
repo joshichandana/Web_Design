@@ -23,14 +23,13 @@ import { deepOrange } from '@mui/material/colors';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import { openLeftDrawer } from '../../store/slice/appSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link';
 import { useEffect } from 'react';
 import TemporaryDrawer from '../drawer/Drawer';
-
+import ListIcon from '@mui/icons-material/List';
 
 // Defining constatns
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -130,7 +129,7 @@ function ResponsiveAppBarComponent() {
       <AppBar position="static"
         sx={{
           bgcolor: '#FFFFFF',
-          color: '#12344d'
+          color: 'white'
         }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters >
@@ -144,9 +143,9 @@ function ResponsiveAppBarComponent() {
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
                   onClick={handleOpenNavMenu}
-                  color="inherit"
+                  color='inherit'
                 >
-                  <MenuIcon />
+                  <ListIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'teal' }} />
                 </IconButton>
               </Box>)
               : null
@@ -154,7 +153,7 @@ function ResponsiveAppBarComponent() {
 
             {/* Logo for small size screen */}
             <Link scroll={false} href="/">
-              <LocalActivityIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: '#12344d' }} />
+              <LocalActivityIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'teal' }} />
             </Link>
 
             {/* CURRENT VIEW NAME */}
@@ -182,7 +181,7 @@ function ResponsiveAppBarComponent() {
             {/* Logo for big size screen */}
             {/* <Link to={"/"} > */}
             <Link scroll={false} href="/" >
-              <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: '#00000' }} />
+              <LocalActivityIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: 'teal' }} />
               {/* <img src='../resources/logo.jpg'></img> */}
             </Link>
             {/* CURRENT VIEW */}

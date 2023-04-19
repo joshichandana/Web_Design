@@ -16,8 +16,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import SpaceDashboardRoundedIcon from '@mui/icons-material/SpaceDashboardRounded';
 import { useDispatch, useSelector } from 'react-redux';
+import ConfirmationNumberRoundedIcon from '@mui/icons-material/ConfirmationNumberRounded';
 
 import { openLeftDrawer, setCurrentView } from '../../store/slice/appSlice'
 import Link from 'next/link';
@@ -58,13 +59,14 @@ export default function TemporaryDrawer() {
               sx={{
                 color: 'white',
                 textDecoration: 'none'
+                
               }}
             >
 
               <ListItemButton onClick={() => handleCurrentViewChange(text)}>
 
                 <ListItemIcon sx={{ color: 'white' }}>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <ConfirmationNumberRoundedIcon/> : <SpaceDashboardRoundedIcon />}
                 </ListItemIcon>
                 <ListItemText sx={{ textDecoration: 'none' }} primary={text} />
               </ListItemButton>

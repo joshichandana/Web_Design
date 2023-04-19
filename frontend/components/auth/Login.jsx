@@ -1,3 +1,4 @@
+// 
 /**
  * Login component.
  * 
@@ -12,7 +13,8 @@
  * @requires store/slice/appSlice
  */
 
-import styles from "./_signup.module.scss";
+// import styles from "./_signup.module.scss";
+import styles from "./_signupform.module.scss"
 import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 import Loginform from "./Loginform.jsx";
@@ -32,22 +34,26 @@ const Login = () => {
     }
 
     return (
-        <div className={styles.signUpContainer}>
-            <div  className={styles.mainContainer}>
-                <div className={styles.formContainer}>
-                    <h1 className={styles.h1Container}>Login</h1>
-                    <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
-                    <Loginform/> 
+        <div className={styles.signInParent}>
+            
+            <div className={styles.signUpContainer}>
+                <Image  height="500px" alt="Login Logo" src={loginAnimation}/>
+                <div  className={styles.mainContainer}>
+                    <div className={styles.formContainer}>
+                        <h1 className={styles.h1Container}>Login</h1>
+                        <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
+                        <Loginform/> 
+                    </div>
                 </div>
+                
+                {/* <div  className={styles.mainContainer}>
+                    <div className={styles.formContainer}>
+                        <h1 className={styles.h1Container}>Login for support portal</h1>
+                        <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
+                        <Loginform/> 
+                    </div>
+                </div> */}
             </div>
-            <Image  height={getHeight()} alt="Login Logo" src={loginAnimation}/>
-            {/* <div  className={styles.mainContainer}>
-                <div className={styles.formContainer}>
-                    <h1 className={styles.h1Container}>Login for support portal</h1>
-                    <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
-                    <Loginform/> 
-                </div>
-            </div> */}
         </div>
         
     );

@@ -1,3 +1,4 @@
+// 
 /**
  * Signup component.
 
@@ -6,7 +7,9 @@
  * @requires react
  * @requires @mui/material
  */
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import styles from "./_signupform.module.scss";
 import React from "react";
 import { Button } from "@mui/material";
@@ -93,16 +96,24 @@ function Signupform() {
 
     return (
         <form className={styles.formHandleSignUp} onSubmit={handleSignUp}>
+            <Container>
+            <Row>
             {fields.map((field) => {
                 return (
-                    <div className={styles.formItem}>
-                        <label className={styles.formLabel}>
-                            {field.label}<span className={styles.formAsterisk}>*</span>
-                        </label>
-                        <input type={field.type} className={styles.formControl} placeholder={field.placeholder} required />
-                    </div>
+                    <>
+                        <Col md={field.type != "password" ? 6 : 12} className="customPadding">
+                        <div className={styles.formItem}>
+                            <label className={styles.formLabel}>
+                                {field.label}<span className={styles.formAsterisk}>*</span>
+                            </label>
+                            <input type={field.type} className={styles.formControl} placeholder={field.placeholder} required />
+                        </div>
+                        </Col>
+                    </>
+                    
                 );
             })}
+            <Col md={12} className="customPadding">
             <div className={styles.formItem}>
                 <label className={styles.formLabel}>Role<span className={styles.formAsterisk}>*</span></label>
                 <div className={styles.labelHolder}>
@@ -125,9 +136,13 @@ function Signupform() {
                     </div> */}
                 </div>  
             </div>
+            
             <div className={styles.formItem}>
                 <Button type='submit' className={styles.registerButton} variant="contained">Register</Button>
             </div>
+            </Col>
+            </Row>
+        </Container>
         </form>
     );
 }

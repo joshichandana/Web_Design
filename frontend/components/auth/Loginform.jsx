@@ -1,3 +1,4 @@
+// 
 /**
  * Login form component.
  * 
@@ -86,10 +87,10 @@ const Loginform = () => {
                 </label>
                 <input type='password' className={styles.formControl} placeholder='Your Password'  required />
             </div>
-            <div className={styles.formItem}>
+            <div className={[styles.formItem,styles.forgotPassword].join(' ')}>
                 <p><a href='/forgotPassword'>Forgot password?</a></p>
             </div>
-            <div className={styles.formItem}>
+            <div className={[styles.formItem,styles.loginBtn].join(' ')}>
                 <Button type='submit' className={styles.loginButton} variant="contained">Login</Button>
                 {/* <button type="submit" className="{button}">Login</button> */}
             </div>

@@ -1,3 +1,4 @@
+// 
 /**
  * Signup component.
 
@@ -11,7 +12,8 @@
  * @requires store/slice/appSlice
  */
 
-import styles from "./_signup.module.scss";
+// import styles from "./_signup.module.scss";
+import styles from "./_signupform.module.scss";
 import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 import Signupform from "./Signupform"
@@ -32,17 +34,17 @@ function Signup() {
     }
 
     return (
-        <div className={styles.signUpParent}>
-      <div className={styles.signUpContainer}>
-        <div className={styles.mainContainer}>
-          <div className={styles.formContainer}>
-            <h1 className={styles.h1Container}>Sign up for support portal</h1>
-            <p>Already a user? <b><a href='/login' className={styles.anchorLogin}>Login</a></b></p>
-            <Signupform/>
+      <div className={styles.signUpParent}>
+        <div className={styles.signUpContainer}>
+          <div className={styles.mainContainer}>
+            <div className={styles.formContainer}>
+              <h1 className={styles.h1Container}>Sign up for support portal</h1>
+              <p>Already a user? <b><a href='/login' className={styles.anchorLogin}>Login</a></b></p>
+              <Signupform/>
+            </div>
           </div>
+          <Image alt="SignUp Logo" width="550" height="457" src={signUpAnimation}/>
         </div>
-        <Image alt="SignUp Logo" width="550" height="457" src={signUpAnimation}/>
-      </div>
     </div>
   );
 
