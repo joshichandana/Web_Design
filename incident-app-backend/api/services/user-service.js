@@ -1,5 +1,7 @@
 import User from './../models/User.js';
 
+
+
 /**
  * Get all users
  * @returns all the users 'users' colection

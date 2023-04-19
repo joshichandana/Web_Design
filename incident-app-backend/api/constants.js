@@ -10,6 +10,7 @@ export default {
   status: ['Open', 'In Progress', 'Resolved', 'Closed'],
   priority: ['Low', 'Medium', 'High', "Urgent"],
   types: ['Bug', 'Feature', 'Task'],
+  role:['Agent','Customer'],
   statusCodes: {
     OK: 200,
     CREATED: 201,

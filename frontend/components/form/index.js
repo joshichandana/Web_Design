@@ -74,7 +74,7 @@ export default function FormData(props) {
     responder_id: loggedInResponder.id,
     tags: [],
   });
-
+  console.log("hello",ticketData)
   const requesterObject = requesters.find((requester) => {
     return requester.id.toString() === ticketData.requester_id.toString();
   });
@@ -94,7 +94,7 @@ export default function FormData(props) {
   };
 
   const saveTicket = (ticketData) => {
-    return fetch('http://localhost:8000/ticket/', {
+    return fetch('http://localhost:8080/incidents/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

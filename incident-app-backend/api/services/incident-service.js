@@ -1,19 +1,20 @@
+import Incident from "../models/incident.js";
+
+
 /**
  * Ticket service
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
- *
- * @module services/ticket-service
- * @requires models/Ticket
+ * Author: Supriya Vallarapu
+ * 
+ * @module services/incident-service
+ * @requires models/incident
  */
 
-import Ticket from '../models/Ticket.js';
 
 /**
  * Get all tickets
  * @returns all the ticket resource in the 'tickets' colection
  */
-export const getAll = () => Ticket.find({});
+export const getAll = () => Incident.find({});
 
 /**
  * Get a ticket by id
@@ -21,7 +22,7 @@ export const getAll = () => Ticket.find({});
  * @returns a ticket resource
  */
 export const get = (id) => {
-  return Ticket.findById(id);
+  return Incident.findById(id);
 };
 
 /**
@@ -29,8 +30,8 @@ export const get = (id) => {
  * @param {*} ticket a ticket resource to be created
  * @returns a ticket resource
  */
-export const save = (ticket) => {
-  return new Ticket(ticket).save();
+export const save = (incident) => {
+  return new Incident(incident).save();
 };
 
 /**
@@ -40,8 +41,8 @@ export const save = (ticket) => {
  * @param {*} opts options that configures mongoose update method
  * @returns the updated ticket resource
  */
-export const update = (id, ticket, opts) => {
-  return Ticket.findByIdAndUpdate(id, ticket, opts);
+export const update = (id, incident, opts) => {
+  return Incident.findByIdAndUpdate(id, incident, opts);
 };
 
 /**
@@ -50,5 +51,11 @@ export const update = (id, ticket, opts) => {
  * @returns the ticket resource that was deleted
  */
 export const remove = (id) => {
-  return Ticket.findByIdAndDelete(id);
+  return Incident.findByIdAndDelete(id);
 };
+
+
+
+
+
+    

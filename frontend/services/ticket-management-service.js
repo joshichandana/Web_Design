@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:8000/';
+const url = 'http://localhost:8080/';
 
 //Default Predefined Values //
 const priority = ['Urgent', 'High', 'Medium', 'Low'];
@@ -70,7 +70,7 @@ const staticColumns = [
 //Default Predefined Values //
 
 export const getAllTickets = async () => {
-    return (await fetch('http://localhost:8000/ticket')).json();
+    return (await fetch('http://localhost:8080/incidents')).json();
 }
 
 // This is used to filter the rows based on Filters applied
