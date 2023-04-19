@@ -19,7 +19,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import { deepOrange } from '@mui/material/colors';
+import { deepOrange, teal } from '@mui/material/colors';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -229,7 +229,7 @@ function ResponsiveAppBarComponent() {
                   <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Open settings">
                       <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                        <Avatar alt={userDetails.firstname} src="/static/images/avatar/2.jpg" sx={{ bgcolor: deepOrange[500] }} />
+                        <Avatar alt={userDetails.firstname} src="/static/images/avatar/3.jpg" sx={{ bgcolor: 'teal' }} />
                       </IconButton>
                     </Tooltip>
                     <Menu

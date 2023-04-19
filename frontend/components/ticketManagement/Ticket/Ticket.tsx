@@ -29,6 +29,7 @@ import { TicketData, resolutionTypes, statusOptions, priorities, emptyTicket } f
 import AlertDialogSlide from "../../reusable/AlertDialogSlide";
 import { setCurrentView } from '../../../store/slice/appSlice';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import DescriptionIcon from '@mui/icons-material/Description';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 
 function Ticket() {
@@ -204,26 +205,20 @@ function Ticket() {
                                         </div>
                                         <div className={styles.ticketDetailsEmail}>
                                             <div className={styles.senderInfo}>{ticketData.requester_id}</div>
-                                            {/* <div className={styles.createdTime}>Last updated at Sun, 30 Oct 2022 at 2:51 PM</div> */}
+                                            
                                             <div className={styles.createdTime}>Last updated at {ticketData.updatedAt}</div>
                                         </div>
                                     </div>
                                     <div className={styles.ticketDetailsItemContent}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15" viewBox="0 0 32 32">
+                                        <DescriptionIcon/>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15" viewBox="0 0 32 32">
                                             <path d="M2.56 5.333h26.347c1.119 0 2.027.912 2.027 2.036v18.327a2.03 2.03 0 01-2.027 2.036H2.56a2.032 2.032 0 01-2.027-2.036V7.369A2.03 2.03 0 012.56 5.333zm.405 2.444V25.29h25.536V7.777H2.965zm4.323 3.667l8.445 5.657 8.445-5.657c.559-.374 1.314-.223 1.686.339s.222 1.32-.337 1.694l-9.12 6.109a1.21 1.21 0 01-1.349 0l-9.12-6.109c-.559-.374-.71-1.133-.337-1.694s1.128-.713 1.686-.339z"></path>
-                                        </svg>
+                                        </svg> */}
                                         <TextEditor text={ticketData.description} reportUpdate={(d: string) => updateTicketKey(d, 'description')} />
                                     </div>
                                 </div>
-
-
-                            </section>
-
-                            {/* INFORMATION UPDATE RIGHT SIDE PANEL HERE */}
-                            <section className={styles.informationUpdatePanel}>
-
-                                {/* STATUS AND RESOLUTION TIME */}
-                                <div className={styles.statusCardWrapper}>
+                                 {/* STATUS AND RESOLUTION TIME */}
+                                 <div className={styles.statusCardWrapper}>
                                     <div className={styles.statusTitle}>
                                         <span>{ticketData.status}</span>
                                     </div>
@@ -241,9 +236,16 @@ function Ticket() {
                                     </div>
                                 </div>
 
+                            </section>
+
+                            {/* INFORMATION UPDATE RIGHT SIDE PANEL HERE */}
+                            <section className={styles.informationUpdatePanel}>
+
+                               
+
                                 {/* OPTIONS */}
                                 <div className={styles.stickyHeader}>
-                                    <div className={styles.properties}>PROPERTIES</div>
+                                    <div className={styles.attributes}>ATTRIBUTES</div>
                                 </div>
 
                                 {/* OPTION CONTAINERS */}

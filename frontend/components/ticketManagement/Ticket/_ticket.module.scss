@@ -83,6 +83,45 @@
             }
         }
     }
+    .resolutionWrapper{
+        padding-top: 1rem;
+        .resolutionTitle{
+            position: relative;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-right: 6px;
+            padding-left: 16px;
+            margin-bottom: 4px;
+            margin-left: 10px;
+            &::before{
+                background-color: rgb(136, 136, 240);
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                top: 4px;
+                left: 2px;
+                box-shadow: 0 0 0 1px #fff;
+                z-index: 2;
+            }
+            &::after {
+                background-color:  rgb(136, 136, 240);
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                left: 0;
+                top: 2px;
+            }
+        }
+
+        .resolutionDate{
+            font-size: 14px;
+        }
+    }
 }
 
 .informationUpdatePanel{
@@ -92,7 +131,8 @@
     box-shadow: inset 10px 0 10px -8px #ebeff3;
     overflow-y: scroll;
     position: relative;
-    
+    border-radius: 10px;
+    margin-top: 10px;
     .statusCardWrapper{
 
         border-bottom: 1px #ebeff3 solid;
@@ -105,45 +145,7 @@
             color: white;
         }
 
-        .resolutionWrapper{
-            padding-top: 1rem;
-            .resolutionTitle{
-                position: relative;
-                font-size: 12px;
-                font-weight: 500;
-                text-transform: uppercase;
-                margin-right: 6px;
-                padding-left: 16px;
-                margin-bottom: 4px;
-
-                &::before{
-                    background-color: rgb(136, 136, 240);
-                    content: "";
-                    position: absolute;
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    top: 4px;
-                    left: 2px;
-                    box-shadow: 0 0 0 1px #fff;
-                    z-index: 2;
-                }
-                &::after {
-                    background-color:  rgb(136, 136, 240);
-                    content: "";
-                    position: absolute;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    left: 0;
-                    top: 2px;
-                }
-            }
-
-            .resolutionDate{
-                font-size: 14px;
-            }
-        }
+        
     }
 
     .stickyHeader{
@@ -153,7 +155,7 @@
         top: 0;
         background-color: teal;
         z-index: 2;
-
+        margin-top: 20px;
         &::before{
             content: "";
             position: sticky;
@@ -162,18 +164,20 @@
             box-shadow: 0 2px 4px rgba(18,52,77,.08);
             z-index: 2;
             height: 16px;
-
-
         }
-        .properties{
+        .attributes{
             position: sticky;
             padding: 14px 0;
             z-index: 5;
-            background-color: #ebeff3;
+            background-color: teal;
             margin-top: -16px;
-            box-shadow: inset 10px÷ 0 10px -8px #ebeff3;
+            box-shadow: inset 10px÷ 0 10px -8px #bbc0c5;
             text-transform: uppercase;
-            letter-spacing: .2px;
+            letter-spacing: .1px;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
         }
     }
 
@@ -190,7 +194,6 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: 'nowrap';
-
             span{
                 margin-right: 4px;
             }

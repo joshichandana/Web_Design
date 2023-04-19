@@ -1,5 +1,5 @@
 export default {
-    role: ['Support','Customer'],
+    role: ['Agent','Customer'],
     status: ['Open', 'In Progress', 'Resolved', 'Closed'],
     priority: ['Low', 'Medium', 'High', "Urgent"],
     types: ['Bug', 'Feature', 'Task'],

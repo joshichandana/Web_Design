@@ -87,8 +87,8 @@ const sampleTicketData1 = {
     "priority": "High",
     "requester_id": "my_1",
     "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-    "createdAt": "2022-11-29T00:32:46.468Z",
-    "updatedAt": "2022-11-29T00:33:30.834Z",
+    "createdAt": "2023-04-29T00:32:46.468Z",
+    "updatedAt": "2023-03-18T00:33:30.834Z",
     "userData": {
         "firstname": "test123",
         "lastname": "desss",
