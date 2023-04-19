@@ -1,8 +1,6 @@
 /**
  * File Name: components/drawer/Drawer.js
- * Author: Dhruv Parthasarathy
- * File Created: 
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file contains the drawer component that acts as the navigation between the Dashboard and the 

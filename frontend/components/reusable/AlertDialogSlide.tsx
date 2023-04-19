@@ -8,23 +8,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 
-//import { makeStyles } from '@material-ui/core/styles';
-
-
-/*const useStyles = makeStyles((theme) => ({
-    root: {
-        // backgroundColor: theme.palette.secondary.main,
-        '& h2': {
-            backgroundColor: '#12344d',
-            color : 'white'
-        }
-    },
-    vSpace: {
-      margin: theme.spacing(2, 0)
-    },
-
-    
-  }));*/
 
 
 const Transition = React.forwardRef(function Transition(
@@ -36,16 +19,7 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-/**
- * File Name: components/reusable/AlertDialogSlide.tsx
- * Author: Dhruv Parthasarathy
- * File Created:
- * Last Modified: Dec, 8th, Thu
- * 
- * About: 
- * This file contains reusable Alert component
- * THis can be triggered whenever we want the user to take a decision between a yes and a no
- */
+
 
 export default function AlertDialogSlide({open,getAlertOutput, title, description}:{description: String, title:String, open:boolean, getAlertOutput:Function}) {
   // const [open, setOpen] = React.useState(false);

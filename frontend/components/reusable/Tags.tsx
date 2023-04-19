@@ -1,8 +1,6 @@
 /**
  * File Name: components/reusable
- * Author: Dhruv Parthasarathy
- * File Created:
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file contains the reusable tags component

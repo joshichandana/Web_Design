@@ -1,8 +1,6 @@
 /**
  * File Name: components/header/Header.js
- * Author: Dhruv Parthasarathy
- * File Created: 
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file contains code for the Header component that appears on top of all pages in teh application

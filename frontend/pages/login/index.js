@@ -1,7 +1,6 @@
 /**
  * Login Page.
- * Author: Divya Shree
- * Date: 08/12/2022
+ 
  *
  * @module pages/login
  * @requires /components/layout/layout

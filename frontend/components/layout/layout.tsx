@@ -1,8 +1,6 @@
 /**
  * File Name: components/layout/layout.tsx
- * Author: Dhruv Parthasarathy
- * File Created:
- * Last Modified: Dec, 8th, Thu
+ *
  * 
  * About: 
  * This layout componet is used to provide the transition animation between the different pages on the app
@@ -27,14 +25,7 @@ const variants = {
 const Layout = ({ children}: Props): JSX.Element => (
     <div>
         {children}
-        {/* <motion.main
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{ duration: 0.5, delay:0.2,  type: 'linear' }}>
-            
-        </motion.main> */}
+        
     </div>
 )
 

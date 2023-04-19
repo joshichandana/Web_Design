@@ -1,7 +1,6 @@
 /**
  * Forgot Password Page.
- * Author: Divya Shree
- * Date: 08/12/2022
+ 
  *
  * @module pages/forgotPassword
  * @requires /components/auth/Forgotpassword

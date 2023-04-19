@@ -1,7 +1,6 @@
 /**
  * Chart component
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
+ * 
  *
  * @module components/chart
  * @requires react

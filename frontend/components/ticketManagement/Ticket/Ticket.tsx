@@ -1,8 +1,6 @@
 /**
  * File Name: components/ticketManagement/Ticket/Ticket.tsx
- * Author: Dhruv Parthasarathy
- * File Created:
- * Last Modified: Dec, 8th, Thu
+ * 
  * 
  * About: 
  * This file contains the individual ticket component
