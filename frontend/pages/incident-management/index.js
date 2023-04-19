@@ -1,21 +1,21 @@
 /**
- * File Name: ticket-management.index.js
+ * File Name: Incident-management.index.js
  * 
  * 
  * About: 
- * This file acts as the export for the Ticket Management component in the app
+ * This file acts as the export for the Incident Management component in the app
  * 
  * Here we have wrapped it around the Layout component that handles the
  * transition animation across pages
  */
 
-import TicketManagement from '../../components/ticketManagement/TicketManagement';
+import IncidentManagement from '../../components/incidentManagement/IncidentManagement';
 import Layout from '../../components/layout/layout'
 
-const AnimatedTicketManagement = () => {
+const AnimatedIncidentManagement = () => {
     return <Layout >
-        <TicketManagement />
+        <IncidentManagement />
     </Layout>
 }
 
-export default AnimatedTicketManagement;
+export default AnimatedIncidentManagement;

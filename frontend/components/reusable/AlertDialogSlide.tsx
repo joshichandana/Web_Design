@@ -41,7 +41,7 @@ export default function AlertDialogSlide({open,getAlertOutput, title, descriptio
         aria-describedby="alert-dialog-slide-description"
         //className={classes.root}
       >
-        <DialogTitle>{"Update Ticket"}</DialogTitle>
+        <DialogTitle>{"Update Incident"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">{title}
           </DialogContentText>

@@ -15,14 +15,14 @@
  import { appSlice } from "./slice/appSlice";
  import { dashboardSlice } from './slice/dashboardSlice'
  import { createWrapper } from "next-redux-wrapper";
- import {ticketManagementSlice} from './slice/ticketManagementSlice'
+ import {IncidentManagementSlice} from './slice/incidentManagementSlice'
 
 
  //combining reducer
 const rootReducer = combineReducers({
     app: appSlice.reducer, //calling the reducer file,
     dashboard: dashboardSlice.reducer ,
-    ticketManagement : ticketManagementSlice.reducer
+    IncidentManagement : IncidentManagementSlice.reducer
 });
 
 export const store = configureStore({

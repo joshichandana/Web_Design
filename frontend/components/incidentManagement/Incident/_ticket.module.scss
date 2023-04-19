@@ -1,0 +1,236 @@
+/**
+ * File Name: components/IncidentManagement/Incident/_Incident.module.scss
+ * 
+ * 
+ * About: 
+ * This file contains the styles for the individual Incident 
+ * information page
+ */
+
+.wrapper{
+    width: 100%;
+    height: calc(100% - 50px);
+
+
+}
+
+.IncidentInfoLayout{
+    display: flex;
+    height: 75vh;
+
+
+}
+
+.mainPanel{
+    width: 80%;
+    padding: 1rem;
+    background-color: white;
+    height: 100%;
+
+    .header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #ebeff3;
+        display: flex;
+        align-items: center;
+    }
+
+    .IncidentDetailsHeader{
+        display: flex;
+        padding: 1rem 0;
+        margin: 0.5rem 1rem;
+
+        .IncidentSubjectInfo{
+            margin-left: 1rem;
+            font-size: 1rem;
+
+            .IncidentSubjectHeading{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .IncidentDetailsWrapper{
+
+        margin-left: 1rem;
+
+        .IncidentDetailsItemHeader{
+            display: flex;
+
+            .IncidentDetailsAvatar{
+                img{
+                    border-radius: 0.4rem;
+                }
+            }
+
+            .IncidentDetailsEmail{
+                margin-left: 1rem;
+                font-size: 0.8rem;
+
+                .createdTime{
+                    font-style: Tahoma;
+                }
+            }
+        }
+
+        .IncidentDetailsItemContent{
+            display: flex;
+            padding: 1rem 0;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+
+            .textContentWrapper{
+                margin-left: 1rem;
+            }
+        }
+    }
+    .resolutionWrapper{
+        padding-top: 1rem;
+        .resolutionTitle{
+            position: relative;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-right: 6px;
+            padding-left: 16px;
+            margin-bottom: 4px;
+            margin-left: 10px;
+            &::before{
+                background-color: rgb(136, 136, 240);
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                top: 4px;
+                left: 2px;
+                box-shadow: 0 0 0 1px #fff;
+                z-index: 2;
+            }
+            &::after {
+                background-color:  rgb(136, 136, 240);
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                left: 0;
+                top: 2px;
+            }
+        }
+
+        .resolutionDate{
+            font-size: 14px;
+        }
+    }
+}
+
+.informationUpdatePanel{
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.795);
+    height: 100%;
+    box-shadow: inset 10px 0 10px -8px #ebeff3;
+    overflow-y: scroll;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 10px;
+    .statusCardWrapper{
+
+        border-bottom: 1px #ebeff3 solid;
+        padding: 22px 0;
+        margin: 0 24px 0 0;
+
+        .statusTitle{
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+
+        
+    }
+
+    .stickyHeader{
+        width: 100%;
+        font-size: 12px;
+        position: sticky;
+        top: 0;
+        background-color: teal;
+        z-index: 2;
+        margin-top: 20px;
+        &::before{
+            content: "";
+            position: sticky;
+            top: 34px;
+            display: block;
+            box-shadow: 0 2px 4px rgba(18,52,77,.08);
+            z-index: 2;
+            height: 16px;
+        }
+        .attributes{
+            position: sticky;
+            padding: 14px 0;
+            z-index: 5;
+            background-color: teal;
+            margin-top: -16px;
+            box-shadow: inset 10px÷ 0 10px -8px #bbc0c5;
+            text-transform: uppercase;
+            letter-spacing: .1px;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+        }
+    }
+
+    .optionsTitle{
+        padding-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .tags {
+        margin-bottom: 16px;
+        .tagsContainer{
+            display: block;
+            width: 20vw;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: 'nowrap';
+            span{
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .updateButtonContainer{
+        background-color: teal;
+        height: 60px;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-radius: 5px;
+        .updateButton{
+            position: relative;
+            padding: 5px 15px 6px;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            letter-spacing: .3px;
+            font-weight: 500;
+            background-color: teal;
+            background-image: linear-gradient(to bottom,teal,teal);
+            color: white;
+            border-radius: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.chip_red{
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    border: 1px solid teal;
+    background: rgb(197, 221, 221);
+    color: teal;
+    font-size: 12px;
+}
+

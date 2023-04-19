@@ -49,7 +49,7 @@ function ResponsiveAppBarComponent() {
 
   /**
    * This function is used to show and hide the menu, the user profile icon and the 
-   * create new ticket button
+   * create new Incident button
    * We hide these when the current view is either on the Login, Sign Up or Forgot Password page
    * @returns void
    */
@@ -94,9 +94,9 @@ function ResponsiveAppBarComponent() {
   }
 
   /**
-   * This function is called when the user clicks on the New Ticket button
+   * This function is called when the user clicks on the New Incident button
    */
-  const handleOpenNewTicketForm = () => {
+  const handleOpenNewIncidentForm = () => {
     Router.push('/incident-management/new');
   };
 
@@ -221,7 +221,7 @@ function ResponsiveAppBarComponent() {
                       //   color: '#12344D',
                       // }
                     }}
-                    onClick={handleOpenNewTicketForm}
+                    onClick={handleOpenNewIncidentForm}
                   >
                     New Incident
                   </Button>

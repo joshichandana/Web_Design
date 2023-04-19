@@ -23,7 +23,7 @@ import { wrapper } from '../store/index';
 import FooterComponent from '../components/footer/footer';
 import ResponsiveAppBarComponent from '../components/header/Header';
 import { useDispatch } from 'react-redux';
-import { fetchRows } from '../store/slice/ticketManagementSlice';
+import { fetchRows } from '../store/slice/incidentManagementSlice';
 import { AnimatePresence } from 'framer-motion'
 import 'bootstrap/dist/css/bootstrap.css';
 // Client-side cache, shared for the whole session of the user in the browser.

@@ -51,9 +51,9 @@ const Incidentsdata = [
 const generateData = (incoming, resolved, overdue) => {
   return {
     labels: [
-      'Number of incoming tickets',
-      'Number of resolved tickets',
-      'Number of overdue tickets'
+      'Number of incoming Incidents',
+      'Number of resolved Incidents',
+      'Number of overdue Incidents'
     ],
     datasets: [
       {
@@ -73,7 +73,7 @@ export default () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
       {Incidentsdata.map((data, index) => (
         <div key={index} style={{ flexBasis: '31%', marginBottom: '20px' }}>
-          <h3>{index + 1}. {data[0]} tickets in {index + 1}:</h3>
+          <h3>{index + 1}. {data[0]} Incidents in {index + 1}:</h3>
           <Pie
             data={generateData(...data)}
             height={80}

@@ -3,7 +3,7 @@ import { RootState } from "../../../store";
 import { useSelector } from "react-redux";
 import styles from './_cards.module.scss'
 import FocusCard from "./focusCard/FocusCard";
-import { TicketData } from "../../../service/models/Ticket";
+import { IncidentData } from "../../../service/models/Incident";
 import { Doughnut } from 'react-chartjs-2';
 
 interface PieChartProps {
@@ -22,10 +22,10 @@ function CardsSection(){
         (state:RootState) =>  state.dashboard.cards
         );
 
-    const ticketsData = useSelector((state:RootState) => state.ticketManagement.rows);
+    const IncidentsData = useSelector((state:RootState) => state.IncidentManagement.rows);
 
     const getCountOfType = (type:string):number => {
-        return ticketsData.filter((ticket:TicketData) => ticket.ticketTypes.includes(type)).length;
+        return IncidentsData.filter((Incident:IncidentData) => Incident.IncidentTypes.includes(type)).length;
     }
 
     const data = {

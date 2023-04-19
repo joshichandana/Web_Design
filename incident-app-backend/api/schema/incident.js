@@ -1,9 +1,9 @@
 /**
- * Ticket Schema
+ * Incident Schema
  * Author: Supriya Vallarapu
  *
  *
- * @module schema/ticket
+ * @module schema/Incident
  * @requires constants
  */
 

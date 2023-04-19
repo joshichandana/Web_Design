@@ -1,5 +1,5 @@
 /**
- * Form component for the ticket creation page.
+ * Form component for the Incident creation page.
  
  *
  * @module components/form
@@ -22,15 +22,15 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import HailTextField from './text-field.js';
-import HailAutocompleteField from './autocomplete-field.js';
+import NinjaField from './autocomplete-field.js';
 import { setCurrentView } from '../../store/slice/appSlice.js';
 
 
 
 /*
  * props should contain:
-  * Array of customers/ticket requesters
-  * Array of agents/ticket responders
+  * Array of customers/Incident requesters
+  * Array of agents/Incident responders
   * The current logged in agent to populate it as a default value for the responder id.
   * Array of tags
 */
@@ -38,7 +38,7 @@ export default function FormData(props) {
   const {
     agent: responders,
     customer: requesters
-  } = props.ticketResources;
+  } = props.IncidentResources;
 
   const loggedInResponder = props.loggedInAgent;
 
@@ -65,7 +65,7 @@ export default function FormData(props) {
 
   const tags = ['tag1', 'tag2', 'tag3'];
 
-  const [ ticketData, setTicketData ] = useState({
+  const [ IncidentData, setIncidentData ] = useState({
     subject: '',
     description: '',
     status: 'Open',
@@ -74,40 +74,40 @@ export default function FormData(props) {
     responder_id: loggedInResponder.id,
     tags: [],
   });
-  console.log("hello",ticketData)
+  console.log("hello",IncidentData)
   const requesterObject = requesters.find((requester) => {
-    return requester.id.toString() === ticketData.requester_id.toString();
+    return requester.id.toString() === IncidentData.requester_id.toString();
   });
 
   const responderObject = responders.find((responder) => {
-    return responder.id.toString() === ticketData.responder_id.toString();
+    return responder.id.toString() === IncidentData.responder_id.toString();
   });
 
   // const classes = useStyles();
   const Router = useRouter();
 
   const handleChange = (event) => {
-    setTicketData({
-      ...ticketData,
+    setIncidentData({
+      ...IncidentData,
       [event.target.name]: event.target.value
     });
   };
 
-  const saveTicket = (ticketData) => {
+  const saveIncident = (IncidentData) => {
     return fetch('http://localhost:8080/incidents/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(ticketData)
+      body: JSON.stringify(IncidentData)
     });
   };
 
   const handleSubmit = async (event) => {
     try {
-      // TODO: display ticket created successful notification using notification service
+      // TODO: display Incident created successful notification using notification service
       event.preventDefault();
-      await saveTicket(ticketData);
+      await saveIncident(IncidentData);
       Router.push('/incident-management');
     } catch (error) {
       // TODO: display error message using notification service
@@ -137,22 +137,22 @@ export default function FormData(props) {
         <HailTextField
           label="Title"
           name="subject"
-          value={ticketData.subject}
+          value={IncidentData.subject}
           onChange={handleChange}
         />
 
         <HailTextField
           label="Description"
           name="description"
-          value={ticketData.description}
+          value={IncidentData.description}
           onChange={handleChange}
           multiline
           rows={4}
         />
 
-        <HailAutocompleteField
+        <NinjaField
           options={['Open', 'In Progress', 'Resolved', 'Closed'] || []}
-          value={ticketData.status}
+          value={IncidentData.status}
           onChange={(event, newValue) => {
             handleChange({
               target: { name: 'status', value: newValue }
@@ -163,9 +163,9 @@ export default function FormData(props) {
           )}
         />
 
-        <HailAutocompleteField
+        <NinjaField
           options={['Low', 'Medium', 'High', 'Urgent'] || []}
-          value={ticketData.priority}
+          value={IncidentData.priority}
           onChange={(event, newValue) => {
             handleChange({
               target: { name: 'priority', value: newValue }
@@ -176,7 +176,7 @@ export default function FormData(props) {
           )}
         />
 
-        <HailAutocompleteField
+        <NinjaField
           options={requesters || []}
           getOptionLabel={(option) => {
             return (typeof option == 'string')
@@ -195,7 +195,7 @@ export default function FormData(props) {
           )}
         />
 
-        <HailAutocompleteField
+        <NinjaField
           options={responders || []}
           getOptionLabel={(option) => {
             return (typeof option == 'string')
@@ -214,10 +214,10 @@ export default function FormData(props) {
           )}
         />
 
-        <HailAutocompleteField
+        <NinjaField
           multiple
           options={tags || []}
-          value={ticketData.tags}
+          value={IncidentData.tags}
           onChange={(event, newValue) => {
             handleChange({
               target: { name: 'tags', value: newValue }
@@ -225,7 +225,7 @@ export default function FormData(props) {
           }}
           renderInput={(params) => (
             <HailTextField
-              label="Tags" name="tags" required={ticketData.tags.length === 0} {...params} />
+              label="Tags" name="tags" required={IncidentData.tags.length === 0} {...params} />
           )}
         />
 

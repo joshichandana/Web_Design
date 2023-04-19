@@ -1,5 +1,5 @@
 /**
- * New Ticket Form page
+ * New Incident Form page
  * 
  *
  * @module pages/incident-management/new
@@ -12,13 +12,13 @@ import FormData from '../../components/form';
 import { useSelector } from 'react-redux';
 import Layout from '../../components/layout/layout';
 
-export default function NewTicketForm() {
+export default function NewIncidentForm() {
   const [dropDownData, loggedInAgent] =
-    useSelector((state) => [state.ticketManagement.dropDownValues, state.app.userDetails]);
+    useSelector((state) => [state.IncidentManagement.dropDownValues, state.app.userDetails]);
 
   return (
     <Layout >
-      <FormData ticketResources={dropDownData} loggedInAgent={loggedInAgent}/>
+      <FormData IncidentResources={dropDownData} loggedInAgent={loggedInAgent}/>
     </Layout>
 
   );

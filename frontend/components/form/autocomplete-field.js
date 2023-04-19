@@ -9,7 +9,7 @@
 
 import { Autocomplete } from '@mui/material';
 
-export default function HailAutocompleteField(props) {
+export default function NinjaField(props) {
   const { required = true } = props;
 
   return (

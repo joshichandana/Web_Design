@@ -5,11 +5,11 @@
  * This file contains the reusable text editor component that can be used
  * Anywhere in the application
  * 
- * Currently this is being used in the individual ticket display page, where the ticket description
+ * Currently this is being used in the individual Incident display page, where the Incident description
  * is displayed
  * 
  * Users can directly place the cursor on the description and continue editing the
- * ticket details
+ * Incident details
  */
 
 import React from 'react';

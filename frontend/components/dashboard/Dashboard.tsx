@@ -11,7 +11,7 @@ import {useDispatch} from 'react-redux';
 import {setCurrentView} from '../../store/slice/appSlice'
 import {useEffect} from 'react';
 import Charts from '../chart';
-import {getAllUserDetails} from '../../store/slice/ticketManagementSlice';
+import {getAllUserDetails} from '../../store/slice/incidentManagementSlice';
 
 function Dashboard(){
 

@@ -1,0 +1,43 @@
+//Main Styles for Filter Screen
+.FilterMain {
+
+    height: calc(100% - 20%);
+    margin: 10px;
+    position: relative;
+
+    // each Filter Item
+    .FilterItem {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-top: 5px;
+        margin: 10px;
+    }
+
+    // each dropdown Filter Item
+    .FilterDiv {
+        text-align: left;
+        background: teal;
+        margin: 5px;
+        padding: 8px;
+        color: white;
+        box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    }
+
+    //Apply Filter Button
+
+    .FilterButton{
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    }
+
+    .FilterItems{
+        position: relative;
+    }
+
+}
