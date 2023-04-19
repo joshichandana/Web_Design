@@ -1,7 +1,4 @@
 /**
- * Constants for the application
- * Author: Aravind Dasarathy
- * Date: 08/12/2022
  *
  * @module constants
  */
