@@ -102,7 +102,7 @@ export default function FormData(props) {
   };
 
   const saveTicket = (ticketData) => {
-    return fetch('http://localhost:8080/incidents/', {
+    return fetch('http://localhost:8080/incident/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ export default function FormData(props) {
       // TODO: display ticket created successful notification using notification service
       event.preventDefault();
       await saveTicket(ticketData);
-      Router.push('/ticket-management');
+      Router.push('/incident-management');
     } catch (error) {
       // TODO: display error message using notification service
       console.log(error);

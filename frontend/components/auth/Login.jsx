@@ -36,7 +36,7 @@ const Login = () => {
         <div className={styles.signUpContainer}>
             <div  className={styles.mainContainer}>
                 <div className={styles.formContainer}>
-                    <h1 className={styles.h1Container}>Login for support portal</h1>
+                    <h1 className={styles.h1Container}>Login</h1>
                     <p>Not a user? <b><a href='/signup' className={styles.anchorLogin}>SignUp</a></b></p>
                     <Loginform/> 
                 </div>

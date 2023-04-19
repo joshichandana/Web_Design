@@ -91,7 +91,7 @@ function FilterScreen() {
 
                 </div>
                 <div className={styles.FilterItem}>
-                    <span>Contacts</span>
+                    <span>Customer</span>
                     <Autocomplete
                         multiple
                         id="tags-standard"
@@ -193,10 +193,11 @@ function FilterScreen() {
                         // boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                         background: 'teal',
                         marginRight: '10px',
-                        // ':hover': {
-                        //     bgcolor: '#ECEFF3', // theme.palette.primary.main
-                        //     color: '#12344D',
-                        // },
+                        width: '100%',
+                         ':hover': {
+                            bgcolor: 'black', // theme.palette.primary.main
+                             color: 'white',
+                         },
 
                     }}
                 >Apply

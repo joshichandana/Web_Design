@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import styles from "./_ticketManagement.module.scss";
 import TicketMenu from './TicketMenu/TicketMenu';
 import Button from '@mui/material/Button';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import MovieFilterIcon from '@mui/icons-material/MovieFilter';
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux';
 import { openFilterDrawer, commonSortFilters, unselectTicket, fetchRows } from '../../store/slice/ticketManagementSlice';
@@ -142,9 +142,7 @@ function TicketManagement() {
                                 />
                             </div> */}
 
-                            
-                        </div>
-                        <div className='FilterScreen'>
+                            <div className='FilterScreen'>
                                 <div className={filterState ?styles.RedIcon : ""}></div>
                                 <Button
                                     variant="contained"
@@ -160,7 +158,7 @@ function TicketManagement() {
 
                                     }}
                                 >
-                                    <KeyboardDoubleArrowRightIcon sx={{
+                                    <MovieFilterIcon sx={{
                                         color: 'white',
                                         ':hover': {
                                             color: '#12344D',
@@ -168,7 +166,9 @@ function TicketManagement() {
                                     }} />
                                     Filter</Button>
 
+                            </div>   
                         </div>
+                        
 
                         <div>
 
@@ -197,7 +197,7 @@ function TicketManagement() {
                                             position: 'absolute',
                                             color: 'white',
                                             top: '15px',
-                                            left: '13px',
+                                            right: '13px',
                                             zIndex: 100
                                         }}
                                         onClick={CloseFilterDrawer}

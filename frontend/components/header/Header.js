@@ -226,7 +226,7 @@ function ResponsiveAppBarComponent() {
                     }}
                     onClick={handleOpenNewTicketForm}
                   >
-                    New Ticket
+                    New Incident
                   </Button>
 
                   <Box sx={{ flexGrow: 0 }}>

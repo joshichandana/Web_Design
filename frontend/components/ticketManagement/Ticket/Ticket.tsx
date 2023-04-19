@@ -79,7 +79,7 @@ function Ticket() {
     }, [ticketData])
 
     useEffect(() => {
-        dispatch(setCurrentView("Ticket Information"));
+        dispatch(setCurrentView("Incident Information"));
     }, [])
 
 
@@ -158,7 +158,7 @@ function Ticket() {
 
                 <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
                     <Link color="gray" href={""} onClick={() => dispatch(unselectTicket())} >
-                        Tickets
+                        Incident
                     </Link>
 
                     <Typography color="text.primary">{selectedTicket}</Typography>

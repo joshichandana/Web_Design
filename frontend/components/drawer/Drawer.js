@@ -6,7 +6,7 @@
  * 
  * About: 
  * This file contains the drawer component that acts as the navigation between the Dashboard and the 
- * Ticket Management Screen
+ * Incident Management Screen
  */
 import * as React from 'react';
 import Box from '@mui/material/Box';

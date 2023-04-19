@@ -8,8 +8,8 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import {useState } from 'react';
 import {  selectTicket, deleteTicketFromMenu } from '../../../store/slice/ticketManagementSlice';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 // import { makeStyles } from '@material-ui/core/styles';
 
 // const useStyles = makeStyles((theme) => ({
@@ -38,15 +38,15 @@ export default function TicketMenu() {
     const [pageSize, setPageSize] = useState<number>(10);
 
     let columns: GridColDef[] = [
-        { field: 'customer', headerName: 'Contact', sortable: false ,flex: 0.25 },
-        { field: 'subject', headerName: 'Subject', flex: 0.5 , sortable: false , align:'center' , headerAlign:'center' },
-        { field: 'agent', headerName: 'Agent', sortable: false ,flex: 0.25,  align: 'center' , headerAlign:'center' },
+        { field: 'customer', headerName: 'Assigner', sortable: false ,flex: 0.25 },
+        { field: 'subject', headerName: 'Title', flex: 0.5 , sortable: false , align:'center' , headerAlign:'center' },
+        { field: 'agent', headerName: 'Assignee', sortable: false ,flex: 0.25,  align: 'center' , headerAlign:'center' },
         { field: 'state', headerName: 'State', sortable: false , align:'center', headerAlign:'center'},
         // { field: 'group', headerName: 'Group', sortable: false , align:'center', headerAlign:'center'},
         { field: 'priority', headerName: 'Priority', sortable: false , align:'center' , headerAlign:'center'},
         { field: 'status', headerName: 'Status', sortable: false , align:'center', headerAlign:'center'},
         {
-            field: 'modify', headerName: 'Modify', sortable: false,
+            field: 'modify', headerName: 'Edit/Delete', sortable: false,
             renderCell: (params: GridRenderCellParams<any>) => (
                 <>
                     <IconButton
@@ -57,7 +57,7 @@ export default function TicketMenu() {
                         }}
                         onClick={() => rowClicked(params)}
                     >
-                        <RemoveRedEyeIcon />
+                        <EditNoteIcon />
 
                     </IconButton>
                     <IconButton
@@ -67,7 +67,7 @@ export default function TicketMenu() {
                         }}
                         onClick={() => setDialog({ state: true, stateRows: params })}
                     >
-                        <DeleteIcon />
+                        < RemoveCircleOutlineIcon/>
                     </IconButton>
                 </>
 
